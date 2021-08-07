@@ -1,5 +1,5 @@
 image:
-  file: .phpmyadmin.Dockerfile
+  file: .gitpod.Dockerfile
   context: .docker
 ports:
   - port: 8001

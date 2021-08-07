@@ -1,9 +1,7 @@
 image:
   file: .phpmyadmin.Dockerfile
-  context: docker
+  context: .docker
 ports:
-  - port: 8000
-    onOpen: open-preview
   - port: 8001
     onOpen: notify
   - port: 8002

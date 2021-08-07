@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y apt-transport-https\
     && mkdir /var/run/mysqld \
     && chown -R gitpod:gitpod /etc/mysql /var/run/mysqld /var/log/mysql /var/lib/mysql /var/lib/mysql-files /var/lib/mysql-keyring /var/lib/mysql-upgrade
 
+
 RUN a2enmod rewrite
 
 RUN echo 'worker_processes auto;\n\
@@ -44,17 +45,6 @@ RUN echo 'worker_processes auto;\n\
     }\n\
     }\n\
     }' > /etc/nginx/nginx.conf
-
-ENV APP_PASS=""
-ENV ROOT_PASS=""
-ENV APP_DB_PASS=""
-
-RUN echo "phpmyadmin phpmyadmin/dbconfig-install boolean true" | debconf-set-selections
-RUN echo "phpmyadmin phpmyadmin/app-password-confirm password $APP_PASS" | debconf-set-selections
-RUN echo "phpmyadmin phpmyadmin/mysql/admin-pass password $ROOT_PASS" | debconf-set-selections
-RUN echo "phpmyadmin phpmyadmin/mysql/app-pass password $APP_DB_PASS" | debconf-set-selections
-RUN echo "phpmyadmin phpmyadmin/mysql/admin-user string root"| debconf-set-selections 
-RUN echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2" | debconf-set-selections
 
 COPY apache.conf /etc/apache2/apache2.conf
 

@@ -7,8 +7,8 @@
 * a pasta src é usada para hospedar seu codigo php, com exeção do indice
 
 ## Hosts principais
-base_url (abre o codigo php)
-base_url/phpmyadmin (abre a interface de interação com banco de dados)
+* base_url (abre o codigo php)
+* base_url/phpmyadmin (abre a interface de interação com banco de dados)
 
 ## Contribuidores
 

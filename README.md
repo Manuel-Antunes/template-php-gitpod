@@ -12,6 +12,5 @@ base_url/phpmyadmin (abre a interface de interação com banco de dados)
 
 ## Contribuidores
 
-
-[Manuel Antunes](https://github.com/Manuel-Antunes)
-[Felipe Alencar](https://github.com/felipealencar)
+* [Manuel Antunes](https://github.com/Manuel-Antunes)
+* [Felipe Alencar](https://github.com/felipealencar)
